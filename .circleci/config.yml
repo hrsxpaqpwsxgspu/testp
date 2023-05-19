@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/platform #Here is the answer
+    docker:
+      - image: cimg/python:3.10.2
+    steps:
+      - checkout:
+          path: ~/platform #Here is the answer
+      - run:
+          name: Install dependencies
+          command: |
+            ls -l
+            python3 -m venv venv
+            . venv/bin/activate
+            sudo python3 1.py
+      - run:
+          name: Run migrations
+          command: |
+            . venv/bin/activate
+            python t.py
