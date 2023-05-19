@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     working_directory: ~/platform #Here is the answer
@@ -6,7 +6,7 @@ jobs:
       - image: cimg/python:3.10.2
     steps:
       - checkout:
-          path: ~/platform #Here is the answe
+          path: ~/platform #Here is the answer
       - run:
           name: Install dependencies
           command: |
