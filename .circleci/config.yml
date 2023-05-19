@@ -6,7 +6,7 @@ jobs:
       - image: cimg/python:3.10.2
     steps:
       - checkout:
-          path: ~/platform #Here is the answer
+          path: ~/platform #Here is the answe
       - run:
           name: Install dependencies
           command: |
